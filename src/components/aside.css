@@ -1,0 +1,25 @@
+.aside-main-container {
+  background-color: aqua;
+  /* height: 100px; */
+  width: 180px;
+  grid-row-start: 1;
+  grid-row-end: 5;
+}
+.aside-item {
+  cursor: pointer;
+  padding: 8px 16px;
+}
+/* aside-item image{
+    width: ;
+    height: ;
+} */
+.aside-item:hover{
+    background-color: rgb(206, 206, 215);
+    border-radius: 10px;
+}
+.aside-item-container{
+    display: flex;
+}
+.home-icon{
+    padding-top: 4px;
+}

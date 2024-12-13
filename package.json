@@ -1,0 +1,22 @@
+{
+  "name": "youtubecloneproject",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "moment": "^2.30.1",
+    "parcel": "^2.13.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^6.28.0",
+    "svgo": "^3.3.2"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
+  }
+}

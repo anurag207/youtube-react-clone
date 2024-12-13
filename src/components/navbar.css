@@ -1,0 +1,38 @@
+.navbar-main-container{
+    background-color: brown;
+    height: 56px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* grid-row-start: 1;
+    grid-row-start: 4; */
+}
+.searchbar
+{
+    /* padding: 16px; */
+    height: 32px;
+    width : 400px;
+    /* max-width: 300px; */
+    /* min-width: 200px; */
+    border-radius: 20px;
+}
+.circle
+{
+    /* width: 20px; */
+    height: 35px;
+    width :35px;
+    border-radius: 50%;
+    background-color: #569499;
+    border: 2px solid brown;
+    border-radius: 50%;
+    /* display:inline; */
+    /* background-color: yellow; */
+    /* transition: all 500ms ease-in-out; */
+}
+.home-button{
+    padding: 4px;
+    border-radius: 20%;
+    font-size: 16px;
+    cursor: pointer;
+}

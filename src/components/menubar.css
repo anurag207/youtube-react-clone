@@ -1,0 +1,22 @@
+.menubar-main-container{
+    background-color: lime;
+    height: 48px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+}
+.menubar-item{
+    padding-right: 24px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    /* box-sizing: content-box; */
+}
+.menubar-item.item1{
+    /* border-bottom: 3px solid black; */
+    text-decoration: underline;
+}
+/* .menu-item-container{
+    box-sizing: content-box;
+
+} */
