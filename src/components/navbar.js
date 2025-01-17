@@ -1,11 +1,15 @@
 import "./navbar.css";
-import {useNavigate} from "react-router-dom";
-const Navbar=()=>{
-    const navigate = useNavigate();
-    return(<nav className="navbar-main-container">
-            <svg
+import searchIcon from "../../icons/search.svg";
+import micIcon from "../../icons/mic.svg";
+import { useNavigate } from "react-router-dom";
+import { FaMicrophone } from "react-icons/fa";
+const Navbar = ({ props }) => {
+  const navigate = useNavigate();
+  return (
+    <nav className="navbar-main-container">
+      <svg
         xmlns="http://www.w3.org/2000/svg"
-        id="yt-ringo2-red-svg_yt85"
+        id="svg-premium-img"
         class="external-icon"
         width="101"
         height="20"
@@ -31,20 +35,34 @@ const Navbar=()=>{
           <path d="M90.0031 18.9002V8.92016C90.3831 8.39016 91.0031 8.07016 91.6031 8.07016C92.3731 8.07016 92.6531 8.61016 92.6531 9.69016V18.9002H95.3131L95.2931 8.93016C95.6631 8.37016 96.2931 8.04016 96.9131 8.04016C97.5831 8.04016 97.9531 8.61016 97.9531 9.69016V18.9002H100.613V9.49016C100.613 7.28016 99.8231 6.27016 98.1531 6.27016C96.9931 6.27016 96.0031 6.69016 95.0931 7.67016C94.7131 6.76016 93.9631 6.27016 92.8931 6.27016C91.6831 6.27016 90.5431 6.79016 89.7431 7.76016H89.5931L89.4031 6.54016H87.3531V18.9002H90.0031Z"></path>
         </g>
       </svg>
-      <button className="home-button" onClick={() => navigate("/")}>
-                Home
-            </button>
-        <form>
-            <input type="text" class="searchbar" placeholder="  Search"></input>
-        </form>
-        <div class="circle"></div>
-        {/* <div>premium</div>
+      {/* <button className={`home-button ${props}`} onClick={() => navigate("/")}>
+        Home
+      </button> */}
+      <div className="search-mic-container">
+      <div className="search-container">
+      <form>
+        <input type="text" class="searchbar" placeholder="  Search"></input>
+      </form>
+      <button className="search-button">
+        <img src={searchIcon} className="search-img"></img>
+      </button>
+      </div>
+      <div class="circle">
+      {/* <img src={micIcon} className="mic-img"></img> */}
+      <FaMicrophone />
+      </div>
+      </div>
+      <div class="account-icon-container">
+        <img className="account-img" src="https://yt3.ggpht.com/yti/ANjgQV9oqY7Djdfq-KjedPlzZT77oKEK3a2aLSDq0szwThU=s88-c-k-c0x00ffffff-no-rj"></img>
+      </div>
+      {/* <div>premium</div>
         <input>search box</input>
         <div>cross</div>
         <div>serch</div>
         <div>mic</div>
         <div>notification</div>
         <div>account</div> */}
-    </nav>);
-    }
-    export default Navbar;  
+    </nav>
+  );
+};
+export default Navbar;

@@ -7,19 +7,26 @@ import {useState} from "react";
 import moment from "moment/moment.js";
 
 const ClickPage = () => {
+  console.log("rendered");
   const [searchParams, _] = useSearchParams();
     // console.log(searchParams);
   const videoIndex = searchParams.get("id");
   const [val,setVal]=useState();
-  const [result,setResult]=useState();
-  const [currentTime,setCurrentTime]=useState();
+  const [result,setResult]=useState([]);
+  const [currentTime,setCurrentTime]=useState([]);
+    console.log(result);
+
+  //let arr=[];
   function handleSubmit(e)
   {
     //var currrentTime=moment();
    e.preventDefault();
-    setResult(val);
-    setCurrentTime(moment().format("hh:mm:ss"));
-    console.log("Function called");
+  setResult([...result, val]);
+  setVal("");
+    //result.push(val);
+    setCurrentTime([...currentTime,moment().format("hh:mm:ss")]);
+    //arr.push(result); 
+    //console.log(result);
   }
   function handChange(e)
   {
@@ -28,7 +35,7 @@ const ClickPage = () => {
   }
   return (
     <div className="clickpage-main-container">
-      <Navbar />
+      <Navbar/>
       <div className="grid-main-container">
         <div className="main-video-container">
           <iframe
@@ -46,15 +53,27 @@ const ClickPage = () => {
           <div className="comment-inputbox-container">
             <h2 className="comment-title">1 Comment</h2>
             <form method="post" onSubmit={handleSubmit}>
-            <input onChange={handChange}
+            <input onChange={handChange}  
+            value={val}
               class="input-comment-box"
               type="text"
               placeholder="Add a comment..."
             ></input>
             <button class="button-add-comment"type="sumbit">Add Comment</button>
             </form>
-            <div class="comment-text"></div>
-            <p>{currentTime} {result} </p>
+            <div class="comment-text">
+            {/* <p>{currentTime.map((elem)=>{elem})}  </p> */}
+            <div class="current-time-comment-text">
+            {
+              currentTime.map((elem)=>{return (<p>{elem}</p>)})
+            }
+            </div>
+            <div class="current-result-comment-text">
+            {
+              result.map((elem)=>{return (<p>{elem}</p>)})
+            }
+            </div>
+            </div>
           </div>
         </div>
         <div className="side-video-container">

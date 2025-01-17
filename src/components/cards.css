@@ -14,7 +14,7 @@
 .cards-item {
   /* height: 200px;
     width: 100px; */
-  background-color: grey;
+  background-color: white;
 }
 .card-img1 {
   width: 250px;
@@ -121,4 +121,10 @@
   display: flex;
   align-items: center;
   gap: 5px;
+}
+.comment-text{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* gap: 10px; */
+  gap: 15px;
 }

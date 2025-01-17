@@ -1,5 +1,5 @@
 .aside-main-container {
-  background-color: aqua;
+  background-color: white;
   /* height: 100px; */
   width: 180px;
   grid-row-start: 1;
@@ -8,6 +8,7 @@
 .aside-item {
   cursor: pointer;
   padding: 8px 16px;
+  font-size: medium;
 }
 /* aside-item image{
     width: ;
@@ -19,6 +20,7 @@
 }
 .aside-item-container{
     display: flex;
+    padding: 8px;
 }
 .home-icon{
     padding-top: 4px;
